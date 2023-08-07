@@ -48,6 +48,16 @@ li.completed span {
     position: relative;
     top: -15px;
 }
+.tacheEffectue {
+    position: relative;
+    top: -15px;
+    margin-bottom: 0;
+}
+
+.tacheAfaire {
+    position: relative;
+    top: -15px;
+}
 .MuiFormControl-root ::placeholder{
     font-size: 15px;
 }
