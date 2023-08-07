@@ -2,7 +2,7 @@
   "name": "to_do_list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://M-BEDH.github.io/to_do_list",
+  "homepage": "https://M-BEDH.github.io/to_do_list/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@emotion/react": "^11.11.1",
