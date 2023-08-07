@@ -63,7 +63,7 @@ function TodoList() {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        maxLength={55}
+        maxLength={50}
         placeholder='Quelle est votre tâche ?' />
       
       <input className='inputResponsive'
