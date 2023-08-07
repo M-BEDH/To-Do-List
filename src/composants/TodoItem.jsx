@@ -31,3 +31,4 @@ const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
 };
 
 export default TodoItem;
+

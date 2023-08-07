@@ -13,17 +13,17 @@ function TodoList() {
   }, []);
 
   function handleInputChange(e) {
-    setInputValue(e.target.value);
+    const newValue = e.target.value.toLowerCase(); // convertir en minuscule
+    if (/^[a-z0-9\s]+$/.test(newValue)) // regex pour accepter les lettres,chiffres,espaces	et vérifier si la valeur est en minuscules
+    setInputValue(newValue);
   }
 
   function handleAddTodo() {
     if (inputValue.trim() !== '') { 
-       // date: new Date().toISOString() pour avoir la date de creation de la tâche dans le local storage
       const newTodo = { text: inputValue, completed: false, creationDate: new Date().toISOString(), validationDate: null };
       setTodos([...todos, newTodo]);
       setInputValue('');
 
-       // Ajouter la tâche au stockage local
       const storedTodos = localStorage.getItem('todos');
       const parsedTodos = storedTodos ? JSON.parse(storedTodos) : [];
       const updatedTodos = [...parsedTodos, newTodo];
@@ -50,7 +50,6 @@ function TodoList() {
     updatedTodos.splice(index, 1);
     setTodos(updatedTodos);
     
-     // Supprimer la tâche du stockage local
     const storedTodos = localStorage.getItem('todos');
     const parsedTodos = storedTodos ? JSON.parse(storedTodos) : [];
     const updatedStoredTodos = parsedTodos.filter((_, i) => i !== index);
@@ -60,8 +59,20 @@ function TodoList() {
   return (
     <div>
       <h1> Ma To Do List</h1>
-      <input className='inputDesktop' type="textarea" value={inputValue} onChange={handleInputChange} maxLength={50} placeholder='Quelle est votre tâche ?' />
-      <input className='inputResponsive' type="textarea" value={inputValue} onChange={handleInputChange} maxLength={20} placeholder='Quelle est votre tâche ?' />
+      <input className='inputDesktop'
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        maxLength={55}
+        placeholder='Quelle est votre tâche ?' />
+      
+      <input className='inputResponsive'
+        type="textarea"
+        value={inputValue}
+        onChange={handleInputChange}
+        maxLength={23}
+        placeholder='Quelle est votre tâche ?' />
+      
       <button className="ajouter" onClick={handleAddTodo}>
         Ajouter
       </button>
@@ -84,4 +95,5 @@ function TodoList() {
 }
 
 export default TodoList;
+
 
