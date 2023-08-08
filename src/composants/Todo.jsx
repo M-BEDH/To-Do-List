@@ -12,11 +12,12 @@ function TodoList() {
     setTodos(parsedTodos);
   }, []);
 
-  function handleInputChange(e) {
-    const newValue = e.target.value.toLowerCase(); // convertir en minuscule
-    if (/^[a-z0-9\s+!+?]+$/.test(newValue)) // regex pour accepter les lettres,chiffres,espaces	et vérifier si la valeur est en minuscules
-    setInputValue(newValue);
-  }
+function handleInputChange(e) {
+  const newValue = e.target.value;
+  const formattedValue = newValue.charAt(0).toUpperCase() + newValue.slice(1).toLowerCase();
+  setInputValue(formattedValue);
+}
+
 
   function handleAddTodo() {
     if (inputValue.trim() !== '') { 
