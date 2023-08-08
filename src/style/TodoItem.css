@@ -55,7 +55,7 @@ li.completed span {
 .tacheEffectue {
     position: relative;
     top: -15px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .tacheAfaire {
@@ -97,7 +97,12 @@ svg {
         font-size: 16px;
         overflow: auto;
     }
-
+.date{
+    width: 200px;
+    font-size: 15px;
+    position: relative;
+    top: -15px;
+}
     .toggle-complete {
         right: 13%;
     }
@@ -114,4 +119,20 @@ svg {
         height: 25px;
     }
 }
+    .toggle-complete {
+        right: 13%;
+    }
+
+    .delete {
+        right: 0%;
+    }
+
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+        width: 150px;
+    }
+
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+        height: 25px;
+    }
+
 
