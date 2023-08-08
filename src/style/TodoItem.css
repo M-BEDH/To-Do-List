@@ -31,7 +31,6 @@ li.completed {
 
 li.completed span {
     color: aliceblue;
-    overflow: hidden;
 }
 
 .completed .fa-check {
