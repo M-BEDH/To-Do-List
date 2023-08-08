@@ -7,7 +7,7 @@ const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
     : 'toggle-complete';
 
   return (
-    <div className='tacheAfaire'>
+    <div className="tacheAfaire">
       <li className={todo.completed ? 'completed' : ''}>
         <span>{todo.text}</span>
         <button
@@ -21,9 +21,13 @@ const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
         </button>
       </li>
       <div className="date">
-        <p className='creationDate'>Date de création: {new Date(todo.creationDate).toLocaleString()}</p>
+        <p className="creationDate">
+          Date de création: {new Date(todo.creationDate).toLocaleString()}
+        </p>
         {todo.validationDate && (
-          <p className='tacheEffectue'>Tache effectuée : {new Date(todo.validationDate).toLocaleString()}</p>
+          <p className="tacheEffectue">
+            Tache effectuée : {new Date(todo.validationDate).toLocaleString()}
+          </p>
         )}
       </div>
     </div>
@@ -31,4 +35,3 @@ const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
 };
 
 export default TodoItem;
-
