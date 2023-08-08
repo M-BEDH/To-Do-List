@@ -30,7 +30,6 @@ li.completed {
 }
 
 li.completed span {
-    color: rgb(4, 240, 248);
     color: aliceblue;
     overflow: hidden;
 }
