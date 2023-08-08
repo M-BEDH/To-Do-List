@@ -9,10 +9,10 @@ body {
 h1 {
     background: linear-gradient(120deg, rgb(157, 177, 111), rgb(103, 123, 235), rgb(157, 177, 111));
     color: rgba(255, 252, 250, 0.986);
-    padding-left: 100px;
     margin-bottom: 50px;
     margin-top: 0;
-    font-family: 'Lumanosimo', cursive;
+    font-family: 'Lumanosimo', cursive, sans serif;
+    text-align: center;
 }
 
 .inputResponsive {
@@ -47,31 +47,18 @@ ul {
 }
 
 
-@media screen and (min-width: 350px) and (max-width: 569px) {
-    h1 {
-        padding-left: 50px;
-    }
-    
-    input {
-        width: 210px;
-        height: 20px;
-    }
-    
+@media screen and (min-width: 340px) and (max-width: 569px) {
     .ajouter {
-        width: 59px;
-        height: 25px;
+        width: 60px;
+        height: 27px;
+
     }
-    
     .inputResponsive {
-        width: 62%;
+        width:70%;
+        height: 25px;
         font-size: 15px;
         display: inline;
     }
-    
-    .inputResponsive:focus-visible {
-        border-color: black;
-    }
-    
     .inputDesktop {
         display: none;
     }
