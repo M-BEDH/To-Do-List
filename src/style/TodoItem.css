@@ -63,6 +63,7 @@ li.completed span {
 .tacheAfaire {
     position: relative;
     top: -15px;
+    padding-right: 5px;
 }
 
 .MuiFormControl-root ::placeholder {
@@ -103,7 +104,7 @@ svg {
     }
 
     .delete {
-        right: 5%;
+        right: 0%;
     }
 
     .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
