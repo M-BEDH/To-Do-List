@@ -22,11 +22,11 @@ const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
       </li>
       <div className="date">
         <p className="creationDate">
-          Date de création: {new Date(todo.creationDate).toLocaleString()}
+          Date de Création: {new Date(todo.creationDate).toLocaleString()}
         </p>
         {todo.validationDate && (
           <p className="tacheEffectue">
-            Tache effectuée : {new Date(todo.validationDate).toLocaleString()}
+            Tâche Effectuée : {new Date(todo.validationDate).toLocaleString()}
           </p>
         )}
       </div>
