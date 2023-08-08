@@ -14,7 +14,7 @@ function TodoList() {
 
   function handleInputChange(e) {
     const newValue = e.target.value.toLowerCase(); // convertir en minuscule
-    if (/^[a-z0-9\s]+$/.test(newValue)) // regex pour accepter les lettres,chiffres,espaces	et vérifier si la valeur est en minuscules
+    if (/^[a-z0-9\s+!+?]+$/.test(newValue)) // regex pour accepter les lettres,chiffres,espaces	et vérifier si la valeur est en minuscules
     setInputValue(newValue);
   }
 
