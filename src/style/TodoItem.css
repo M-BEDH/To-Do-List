@@ -67,7 +67,7 @@ li.completed span {
 @media screen and (min-width: 340px) and (max-width: 569px) {
     li {
         width: 75%;
-        padding-left: 10px;
+        padding-left: 5px;
         font-size: 16px;
         overflow: auto;
         display: flex;
