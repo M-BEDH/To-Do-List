@@ -36,7 +36,7 @@ li.completed span {
 }
 
 .completed .fa-check {
-    color: rgb(56, 15, 204);
+    color: white;
     font-weight: bold;
     font-size: large;
 }
