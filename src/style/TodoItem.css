@@ -70,6 +70,7 @@ li.completed span {
         padding-left: 10px;
         font-size: 16px;
         overflow: auto;
+        display: flex;
     }
 .date {
     width: 200px;
