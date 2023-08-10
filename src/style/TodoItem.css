@@ -28,7 +28,7 @@ li {
 }
 
 li.completed {
-    background-color: rgb(60, 218, 60);
+    background-color: rgb(95, 201, 95);
 }
 
 li.completed span {
@@ -42,7 +42,7 @@ li.completed span {
 }
 
 .completed {
-    background-color: rgb(60, 218, 60);
+    background-color:rgb(95, 201, 95);
 }
 
 .fa-trash {
