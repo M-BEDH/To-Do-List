@@ -79,7 +79,7 @@ function TodoList() {
         type="textarea"
         value={inputValue}
         onChange={handleInputChange}
-        maxLength={26}
+        maxLength={30}
         placeholder="Quelle est votre tâche ?"
       />
 
