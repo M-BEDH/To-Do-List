@@ -1,22 +1,38 @@
 import React from 'react';
 import './../style/TodoItem.css';
 
-const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
-  const toggleComplete = todo.completed
-    ? 'toggle-complete completed'
-    : 'toggle-complete';
+function TodoItem({ todo, index, handleToggleComplete, handleDeleteTodo }) {
+  function getToggleCompleteClass() {
+    return todo.completed ? 'toggle-complete completed' : 'toggle-complete';
+  }
+
+  function handleToggleClick() {
+    handleToggleComplete(index);
+  }
+
+  function handleDeleteClick() {
+    handleDeleteTodo(index);
+  }
+
+  function renderValidationDate() {
+    if (todo.validationDate) {
+      return (
+        <p className="tacheEffectue">
+          Tâche Effectuée : {new Date(todo.validationDate).toLocaleString()}
+        </p>
+      );
+    }
+    return null;
+  }
 
   return (
     <div className="tacheAfaire">
       <li className={todo.completed ? 'completed' : ''}>
         <span>{todo.text}</span>
-        <button
-          className={toggleComplete}
-          onClick={() => handleToggleComplete(index)}
-        >
+        <button className={getToggleCompleteClass()} onClick={handleToggleClick}>
           <i className="fa-solid fa-check"></i>
         </button>
-        <button className="delete" onClick={() => handleDeleteTodo(index)}>
+        <button className="delete" onClick={handleDeleteClick}>
           <i className="fa-solid fa-trash"></i>
         </button>
       </li>
@@ -24,14 +40,10 @@ const TodoItem = ({ todo, index, handleToggleComplete, handleDeleteTodo }) => {
         <p className="creationDate">
           Date de Création: {new Date(todo.creationDate).toLocaleString()}
         </p>
-        {todo.validationDate && (
-          <p className="tacheEffectue">
-            Tâche Effectuée : {new Date(todo.validationDate).toLocaleString()}
-          </p>
-        )}
+        {renderValidationDate()}
       </div>
     </div>
   );
-};
+}
 
 export default TodoItem;
