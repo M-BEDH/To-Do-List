@@ -14,9 +14,7 @@ function TodoList() {
 
   function handleInputChange(e) {
     const newValue = e.target.value;
-    const formattedValue =
-      newValue.charAt(0).toUpperCase() + newValue.slice(1).toLowerCase();
-    setInputValue(formattedValue);
+    setInputValue(newValue);
   }
 
   function handleAddTodo() {
@@ -29,7 +27,7 @@ function TodoList() {
       };
       setTodos([...todos, newTodo]);
       setInputValue('');
-
+ 
       const storedTodos = localStorage.getItem('todos');
       const parsedTodos = storedTodos ? JSON.parse(storedTodos) : [];
       const updatedTodos = [...parsedTodos, newTodo];
