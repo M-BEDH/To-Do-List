@@ -1,14 +1,15 @@
 body {
+    max-width: 545px;
     padding: 10px;
-    background-color: rgb(247, 252, 248);
-    max-width: 700px;
+    background: #f4fafc;
     margin: auto;
-    border: 1px solid rgb(218, 218, 27);
+    border: 1px solid rgb(255, 240, 208);
 }
 
 h1 {
-    background: linear-gradient(120deg, rgb(211, 238, 150), rgb(120, 137, 236), rgb(211, 238, 150));
-    color: rgba(255, 252, 250, 0.986);
+    background: linear-gradient(120deg, #d3ee96, #75aceb, #f3d6b1);
+    color: #ffffff;
+    text-shadow: #fbf0ff 1px 1px, 1px;
     margin-bottom: 50px;
     margin-top: 0;
     font-family: 'Lumanosimo', sans serif;
@@ -20,9 +21,9 @@ h1 {
 }
 
 .ajouter {
-    color: rgba(66, 2, 0, 0.74);
-    background-color: rgb(225, 216, 228);
-    border: 1px solid rgb(20, 20, 20);
+    color: #610583;
+    background-color: #fbf0ff;
+    border: 1px solid #141414;
     margin-left: 20px;
     height: 32px;
     width: 75px;
@@ -43,11 +44,12 @@ ul {
 }
 
 .fa-solid {
-    color: rgb(79, 75, 75);
+    font-size: 17px;
+    color: #9fa19f;
 }
 
 
-@media screen and (min-width: 340px) and (max-width: 569px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
     .ajouter {
         width: 60px;
         height: 28px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './../style/Todo.css';
-import TodoItem from './TodoItem';
+import './Todo.css';
+import TodoItem from '../ToDoItem/TodoItem';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -19,8 +19,9 @@ function TodoList() {
 
   function handleAddTodo() {
     if (inputValue.trim() !== '') {
+      const capitalize = inputValue.charAt(0).toUpperCase() + inputValue.slice(1)
       const newTodo = {
-        text: inputValue,
+        text: capitalize,
         completed: false,
         creationDate: new Date().toISOString(),
         validationDate: null
@@ -62,7 +63,7 @@ function TodoList() {
 
   return (
     <div>
-      <h1> Ma To Do List</h1>
+      <h1>To Do List</h1>
       <input
         className="inputDesktop"
         type="text"

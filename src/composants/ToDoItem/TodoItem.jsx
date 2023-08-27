@@ -1,5 +1,5 @@
 import React from 'react';
-import './../style/TodoItem.css';
+import './TodoItem.css';
 
 function TodoItem({ todo, index, handleToggleComplete, handleDeleteTodo }) {
   function getToggleCompleteClass() {
@@ -18,7 +18,7 @@ function TodoItem({ todo, index, handleToggleComplete, handleDeleteTodo }) {
     if (todo.validationDate) {
       return (
         <p className="tacheEffectue">
-          Tâche Effectuée : {new Date(todo.validationDate).toLocaleString()}
+          Effectuée : {new Date(todo.validationDate).toLocaleString()}
         </p>
       );
     }
@@ -38,7 +38,7 @@ function TodoItem({ todo, index, handleToggleComplete, handleDeleteTodo }) {
       </li>
       <div className="date">
         <p className="creationDate">
-          Date de Création: {new Date(todo.creationDate).toLocaleString()}
+          Créer le : {new Date(todo.creationDate).toLocaleString()}
         </p>
         {renderValidationDate()}
       </div>

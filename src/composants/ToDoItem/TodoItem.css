@@ -3,10 +3,11 @@
     height: 23px;
     position: absolute;
     right: 22%;
+    background-color: #ffffff;
 }
 
 .delete {
-    background-color: rgb(238, 16, 16);
+    background-color: #ee1010;
     position: absolute;
     height: 23px;
     width: 30px;
@@ -18,40 +19,40 @@ li {
     font-family: Georgia, 'Times New Roman', Times, sans-serif;
     list-style: none;
     width: 68%;
-    height: 30px;
+    height: 25px;
     overflow: auto;
     display: flex;
-    border: 2px solid rgb(204, 197, 197);
+    border: 2px solid #ccc5c5;
     margin-bottom: 20px;
     padding-left: 5px;
     padding-top: 3px;
 }
 
 li.completed {
-    background-color: rgb(95, 201, 95);
+    background-color: #07c907;
 }
 
 li.completed span {
-    color: aliceblue;
+    color: #ffffff;
 }
 
 .completed .fa-check {
-    color: white;
-    font-weight: bold;
-    font-size: large;
+    color: #ffffff;
 }
 
 .completed {
-    background-color:rgb(95, 201, 95);
+    background-color:#04cf04;
 }
 
 .fa-trash {
-    color: rgb(223, 212, 212);
+    font-size: 13px;
+    color: #ffffff;
 }
 
 .date {
     position: relative;
     top: -15px;
+    font-size: 14px;
 }
 
 .tacheEffectue {
@@ -63,10 +64,11 @@ li.completed span {
 .tacheAfaire {
     position: relative;
     top: -15px;
+    width: 535px;
 }
 
 
-@media screen and (min-width: 340px) and (max-width: 569px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
     li {
         width: 75%;
         padding-left: 5px;
@@ -76,15 +78,18 @@ li.completed span {
     }
 .date {
     width: 200px;
-    font-size: 15px;
+    font-size: 12px;
     position: relative;
     top: -15px;
 }
+.tacheAfaire{
+    width: 105%;
+}
     .toggle-complete {
-        right: 5%;
+        right: 10%;
     }
 
     .delete {
-        right: -10%;
+        right: -2%;
     }
 }
